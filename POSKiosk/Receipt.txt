@@ -1,0 +1,9 @@
+Thu Feb 27 01:47:00 EST 2020
+Law L
+Credit card ending in 1111
+
+1 Classic Chicago - 4.00
+----------------------------------
+Subtotal        4.00
+Tax             0.28
+Total           4.28

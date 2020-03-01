@@ -1,0 +1,62 @@
+I. What was added?
+
+lines 41-45 - additional imports
+lines 344-403 - PayPanel and ReceiptPanel 
+lines 1493-1557 - PayPanel and ReceiptPanel button listeners
+lines 1620-1754 - PayPanel helper methods
+lines 1755-1841 - custom text field classes for PayPanel
+
+
+
+II. What else was changed?
+
+lines 1479-1488 - Pay button action listener from ReviewPanel
+
+
+
+III. What data validation does the PayPanel perform
+
+name on card
+ -must not be empty 
+ -letters and whitespace only
+ -must have a space
+ -1st space must not be last character
+
+credit card number
+ -must not be empty
+ -numbers only
+ -no spaces
+ -19 digit limit
+ -number verified by Luhn algorithm
+ -follows either MasterCard or VISA numbering convention
+
+security code 
+ -must not be empty
+ -numbers only
+ -no spaces
+ -exactly 3 digits required
+ -characters hidden
+
+expiration date
+ -must not be empty
+ -numbers only
+ -exactly 4 digits required
+ -must be current month or in future (compared to system date)
+
+ZIP code 
+ -must not be empty
+ -numbers only
+ -exactly 5 digits required
+
+
+
+IV. Things that should be improved or built
+
+PayPanel
+ -total should be displayed so customer knows how much they are paying
+ -information should be sent to SQL when Confirm Payment button is pressed and all tests result in true
+
+ReceiptPanel
+ -paid message should reflect total charged and the last 4 digits of the credit card charged
+ -create a receipt button that prints order info to text file
+ -existing Create New Order button should clear all items from cart before switching to BeginningPanel
